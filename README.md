@@ -39,13 +39,15 @@
     
 - 도커 사용할때의 흐름
     
+  ![Docker사용흐름](https://user-images.githubusercontent.com/40652160/139088535-22a6d461-96c8-4c46-9a67-8225326d069f.png)
     
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/dfd27df5-cab4-4ada-996f-f0a034c4590a/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/dfd27df5-cab4-4ada-996f-f0a034c4590a/Untitled.png)
-    
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b301bccc-87fc-4f48-8a5c-4c145dd867e2/Untitled.png)
+   ![흐름2](https://user-images.githubusercontent.com/40652160/139088652-2bf126fe-f742-4763-ba46-2ab0e3cc30d5.png)
+
     
     1. 먼저 도커 CLI에 커맨드를 입력한다.
     2. 그러면 도커 서버 (도커 Daemon)이 그 커맨드를 받아서 그것에 따라 이미지를 생성하든 컨테이너를 실행하든 모든 작업을 하게된다.
+
+
 - 도커와 기존의 가상화 기술의 차이를 통한 컨테이너 이해
     
     ## 가상화 기술 나오기 전
@@ -65,11 +67,11 @@
     
     ## 하이퍼 바이저 기반의 가상화 출현
     
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f87948a9-457d-41ed-bbad-b092b37ad223/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f87948a9-457d-41ed-bbad-b092b37ad223/Untitled.png)
+ ![image](https://user-images.githubusercontent.com/40652160/139088870-b15e477c-c5c6-4a8d-97fc-c1d1fc82b47b.png))
     
     ## 도커와 하이퍼 바이저 기반 가상화의 공통점과 차이점
     
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bbb44bcc-acc3-4c2b-8ce5-d3792e422426/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bbb44bcc-acc3-4c2b-8ce5-d3792e422426/Untitled.png)
+   ![image](https://user-images.githubusercontent.com/40652160/139088930-c4623ae5-0c33-4c71-8111-f71eb90c8d9e.png)
     
     공통점
     
@@ -102,7 +104,8 @@
     
     root 디렉터리를 변경하여 특정 프로세스가 상위 디렉터리에 접근할 수 없도록 격리시킬 수 있다. 정확히 이 역할을 하는것이 Chroot이다.
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4b6129cf-45e5-4024-bfbe-6097095a376f/Untitled.png)
+![image](https://user-images.githubusercontent.com/40652160/139089070-8b032545-3e75-495c-bb8c-7bb503f53980.png)
+
     
     ### Cgroup
     
@@ -129,17 +132,19 @@
     1. Docker 클라이언트에 `docker run <이미지>` 입력
     2. 도커 이미지에 있는 파일 스냅샷을 컨테이너 하드 디스크에 옮겨 줍니다.
     
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/89e2f4d1-466d-460e-b1de-64e3648445e6/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/89e2f4d1-466d-460e-b1de-64e3648445e6/Untitled.png)
+    ![image](https://user-images.githubusercontent.com/40652160/139089168-b6840bc2-427d-4ad2-b0cd-c5ba9081e430.png)
     
-    1. 이미지에서 가지고 있는 명령어(컨테이너가 실행될때 사용될 명령어들)를 이용해서 카카오톡을 실행시켜줌
+    3. 이미지에서 가지고 있는 명령어(컨테이너가 실행될때 사용될 명령어들)를 이용해서 카카오톡을 실행시켜줌
     
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/474f36c4-d501-476d-a2ea-387adc8604b6/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/474f36c4-d501-476d-a2ea-387adc8604b6/Untitled.png)
-    
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/69c673eb-40a3-4db3-8aec-9e6545fe12cb/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/69c673eb-40a3-4db3-8aec-9e6545fe12cb/Untitled.png)
+    ![image](https://user-images.githubusercontent.com/40652160/139089449-f702a406-3063-4eb6-bb60-3a5edc30fd17.png)
+
+    ![image](https://user-images.githubusercontent.com/40652160/139089496-8103440e-c641-47bf-8d09-5708fecfc1d2.png)
+
     
 - Namespace와 Cgroup은 리눅스 기능인데 어떻게 내컴퓨터(맥)에서 사용할 수 있는것인가?
     
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/45b16bef-a10b-4afe-b685-3933ff4c8209/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/45b16bef-a10b-4afe-b685-3933ff4c8209/Untitled.png)
+    ![image](https://user-images.githubusercontent.com/40652160/139089597-42a5e0ae-7083-4f60-a642-af426a131dee.png)
+
     
     내부적으로는 그림과 같이 작동한다.
     
