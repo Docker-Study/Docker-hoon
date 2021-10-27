@@ -153,11 +153,13 @@
 
 - 이미지 내부 파일 시스템 구조 보기
     
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f9f03deb-60b4-476e-9355-59be7cc540cf/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f9f03deb-60b4-476e-9355-59be7cc540cf/Untitled.png)
+    ![image](https://user-images.githubusercontent.com/40652160/139089802-569f651d-2bd0-46ca-8463-0b2d765158f5.png)
+
     
     ex) docker run alpine ls → 
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4aaf02db-bf0d-4edc-bad1-201e82a18f4e/Untitled.png)
+    ![image](https://user-images.githubusercontent.com/40652160/139089847-7fbd7357-2e98-408a-b47c-d44f2b991cfe.png)
+
     
 - 컨테이너들 나열하기
     
@@ -167,7 +169,8 @@
     
     ## 1.생성, 실행
     
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d8d4b3f9-b8ac-4984-84da-93e8d86e82cd/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d8d4b3f9-b8ac-4984-84da-93e8d86e82cd/Untitled.png)
+    ![image](https://user-images.githubusercontent.com/40652160/139089913-da36a7e7-bd3b-4103-8da9-717f88d35efe.png)
+
     
     `docker run start`  = `docker create <이미지 이름>` + `docker start <시작할 컨테이너 아이디/이름>`
     
@@ -185,11 +188,13 @@
     
     - 자비롭게 그동안 하던 작업들을(메시지를 보내고 있었다면 보내고 있던 메시지) 완료하고 컨테이너를 중지시킴
     
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2d7341fe-ba7a-479a-92b4-bbfbdc1ea95e/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2d7341fe-ba7a-479a-92b4-bbfbdc1ea95e/Untitled.png)
+    ![image](https://user-images.githubusercontent.com/40652160/139089968-74fbfa90-9970-4b02-b4dd-f5f7c018071e.png)
+
     
     `KILL`같은 경우는 `stop`과 달리 어떠한 것도 기다리지 않고 바로 컨테이너를 중지시킨다.
     
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0e365afa-7a07-4830-a3a4-3ca9d7ac5549/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0e365afa-7a07-4830-a3a4-3ca9d7ac5549/Untitled.png)
+    ![image](https://user-images.githubusercontent.com/40652160/139090002-b1508f44-ce19-4cc3-90f4-33876aa32fd2.png)
+
     
     ## 3. 삭제
     
@@ -213,6 +218,8 @@
     
     - 도커를 쓰지 않을때 모두 정리를 하고싶을때 사용해주면 좋음
     - 하지만 실행중인 컨테이너에는 영향을 주지 않는다.
+
+
 - 실행중인 컨테이너에 명령어 전달
     
     ### docker exec <컨테이너 아이디>
@@ -221,13 +228,16 @@
     
     - docker run은 `새로운 컨테이너`를 만들어서 실행
     - docker exec는 이미 `실행중인 컨테이너`에 명령어를 전달
+
+
 - 레디스를 이용한 컨테이너 이해
     
     **목표:** 격리된 컨테이너 안에 있는 컴포넌트에 접근해보기
     
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2baebf1f-9d9b-4bb5-99b4-91f37cf73be1/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2baebf1f-9d9b-4bb5-99b4-91f37cf73be1/Untitled.png)
-    
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ce7a2562-d7d2-41cc-942f-45d681f8b196/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ce7a2562-d7d2-41cc-942f-45d681f8b196/Untitled.png)
+    ![image](https://user-images.githubusercontent.com/40652160/139090119-7a9b6314-ba69-40fc-b570-ba4116842877.png)
+
+    ![image](https://user-images.githubusercontent.com/40652160/139090204-053f2b9d-4f76-4c33-a9c6-c22609feec1e.png)
+    ![image](https://user-images.githubusercontent.com/40652160/139090231-0afc370e-65fd-4f5a-9418-8cfdd8408403.png)
     
     해결 방법
     
@@ -241,9 +251,8 @@
 - 실행중인 컨테이너에서 터미널 생활 즐기기
     - 앞에서 특정 컨테이너에 대한 명령을 실행할때 docer exec ... 이런 명령어들을 함께 계속 써주었는데 너무 귀찮아 질 때가 있다.
     
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7a5912a7-e5f9-4922-afd3-eb4b3bd9776b/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7a5912a7-e5f9-4922-afd3-eb4b3bd9776b/Untitled.png)
-    
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/136dcf8f-5e74-4b66-8b31-ecd96d3abcb8/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/136dcf8f-5e74-4b66-8b31-ecd96d3abcb8/Untitled.png)
+    ![image](https://user-images.githubusercontent.com/40652160/139090395-d3a380e5-d173-4f8e-82ec-8028d616ebba.png) 
+
     
     컨테이너 안 shell 환경에 접근 가능하다.
     
@@ -265,7 +274,7 @@
     
     ### 도커 파일 만들어보기
     
-    ```jsx
+    ```Dockerfile
     #베이스 이미지를 명시해 준다 ex) ubuntu centos aplpine
     FROM baseImage
     
@@ -301,23 +310,27 @@
     - 도커 이미지는 여러개의 레이어로 되어 있다. 그 중에서 베이스 이미지는 이 이미지의 기반이 되는 부분이다.
     - 레이어는 중간 단계의 이미지라고 생각하면 된다.
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/eccf4f38-39ed-4ab8-9246-42f683a51eaa/Untitled.png)
+    ![image](https://user-images.githubusercontent.com/40652160/139090561-6c32a4ac-9a87-4165-82a9-7c3bcb091236.png)
+
     
 - dockerfile로 도커 이미지 만들기
     
     ### 완성된 도커 파일로 어떻게 이미지를 생성하나요?
     
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/aaefb6f8-041d-4928-aa01-1350d91c73f7/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/aaefb6f8-041d-4928-aa01-1350d91c73f7/Untitled.png)
+    ![image](https://user-images.githubusercontent.com/40652160/139090598-0dacf6cb-b63d-4313-a408-d9312b14fa6c.png)
+
     
     - 도커 파일에 입력된 것들이 도커 클라이언트에 전달되어서 도커 서버가 인식하게 하여야 합니다. 그렇게 하기 위해서 `docker build ./` 또는 `docker build .`
     
     베이스 이미지에서 다른 종속성이나 새로운 커맨드를 추가 할때는 임시 컨테이너를 만든 후 그 컨테이너를 토대로 새로운 이미지를 만든다. 그리고 그 임시 컨테이너는 지워준다.
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4a78a129-9ac7-4bf8-9004-af6f399bff2d/Untitled.png)
+    ![image](https://user-images.githubusercontent.com/40652160/139090671-aca6f21a-0411-4684-baef-33a4aaf240ce.png)
+
     
 - 내가만든 이미지 기억하기 쉬운 이름 주기
     
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/68df895f-8d96-49bb-9bfb-753cef4752e6/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/68df895f-8d96-49bb-9bfb-753cef4752e6/Untitled.png)
+    ![image](https://user-images.githubusercontent.com/40652160/139090718-5ef3b8c9-39c8-41fe-8cd1-3b9a013d55c5.png)
+
     
     docker build -t dudgns3tp/hello:latest ./  이런식으로
     
